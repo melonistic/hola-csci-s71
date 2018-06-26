@@ -3,10 +3,14 @@ package edu.melonistic;
 public class Main {
 
     public static void main(String[] args) {
-        String name = args[0];
-        if (null == name) {
-            name = ", identify";
+        final String name;
+        if (0 == args.length) {
+            name = ", identify yourself";
+        } else {
+            name = args[0];
         }
-        System.out.printf("Hola %s!!!", args[0]);
+        System.out.println();
+        System.out.printf("Hola %s!!!", name);
+        System.out.println();
     }
 }
